@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const {connection} = require('./Connection');
+const {connection} = require('../utils/database');
 const bcrypt = require('bcrypt');
 const salt = 10;
 const table = "users";
@@ -72,7 +72,6 @@ const getAll = (callback)=>{
 		callback(result);
 	});
 }
-
 
 module.exports = {
 	createUser,

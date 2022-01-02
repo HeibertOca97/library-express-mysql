@@ -1,0 +1,24 @@
+<%- include('./layouts/header.ejs') -%>
+
+<% if(message.length > 0){ %>
+	<div class="alert alert-danger" role="alert"><%= message %></div>
+<% } %>
+
+<div class="d-flex flex-wrap justify-content-center align-items-center" style="height: 100vh;">
+<form action="/signup" class="border rounded p-4" method="post">
+	<div class="form-group">
+		<input type="text" name="username" class="form-control" autocomplete="off" placeholder="username">
+	</div>
+	<div class="form-group">
+		<input type="password", name="password" class="form-control" autocomplete="off" placeholder="password">
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" type="submit">Sign up</button>
+	</div>
+	<div class="form-group">
+		<a href="/signup">You already have an acount, enter this link to go to login</a>
+	</div>
+</form>
+</div>
+
+<%- include('./layouts/footer.ejs') -%>
